@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JavaScript Eval Runner</title>
+  <title>Local JavaScript</title>
   <style>
     body {
       font-family: sans-serif;
@@ -34,7 +34,6 @@
   <pre id="output"></pre>
 
   <script>
-    // Capture console.log output
     const originalLog = console.log;
     console.log = function(...args) {
       const output = document.getElementById('output');
@@ -45,7 +44,7 @@
     function runCode() {
       const code = document.getElementById('code').value;
       const output = document.getElementById('output');
-      output.textContent = ''; // Clear previous output
+      output.textContent = '';
 
       try {
         eval(code);
